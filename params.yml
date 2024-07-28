@@ -3,7 +3,7 @@
 # The deployment process is divided into various stages.
 
 # Deploy local L1.
-deploy_l1: true
+deploy_l1: false
 
 # Deploy zkevm contracts on L1 (and also fund accounts).
 deploy_zkevm_contracts_on_l1: true
@@ -24,7 +24,7 @@ deploy_zkevm_permissionless_node: false
 deploy_observability: true
 
 # Deploy Blockscout stack.
-deploy_l2_blockscout: false
+deploy_l2_blockscout: true
 
 # Deploy eth load balancer.
 deploy_blutgang: false
@@ -42,7 +42,7 @@ args:
   # - 'rollup': Transaction data is stored on-chain on L1.
   # - 'cdk-validium': Transaction data is stored off-chain using the CDK DA layer and a DAC.
   # In the future, we would like to support external DA protocols such as Avail, Celestia and Near.
-  data_availability_mode: cdk-validium
+  data_availability_mode: rollup
 
   # Docker images and repositories used to spin up services.
   zkevm_prover_image: hermeznetwork/zkevm-prover:v6.0.0
@@ -87,45 +87,46 @@ args:
   # Addresses and private keys of the different components.
   # They have been generated using the following command:
   # polycli wallet inspect --mnemonic 'lab code glass agree maid neutral vessel horror deny frequent favorite soft gate galaxy proof vintage once figure diary virtual scissors marble shrug drop' --addresses 9 | tee keys.txt | jq -r '.Addresses[] | [.ETHAddress, .HexPrivateKey] | @tsv' | awk 'BEGIN{split("sequencer,aggregator,claimtxmanager,timelock,admin,loadtest,agglayer,dac,proofsigner",roles,",")} {print "zkevm_l2_" roles[NR] "_address: \"" $1 "\""; print "zkevm_l2_" roles[NR] "_private_key: \"0x" $2 "\"\n"}'
-  zkevm_l2_sequencer_address: "0x5b06837A43bdC3dD9F114558DAf4B26ed49842Ed"
-  zkevm_l2_sequencer_private_key: "0x183c492d0ba156041a7f31a1b188958a7a22eebadca741a7fe64436092dc3181"
+  # polycli wallet inspect --mnemonic 'twenty garment idea impact dignity humor iron ritual remind brief fantasy calm' --addresses 9 | tee keys.txt | jq -r '.Addresses[] | [.ETHAddress, .HexPrivateKey] | @tsv' | awk 'BEGIN{split("sequencer,aggregator,claimtxmanager,timelock,admin,loadtest,agglayer,dac,proofsigner",roles,",")} {print "zkevm_l2_" roles[NR] "_address: \"" $1 "\""; print "zkevm_l2_" roles[NR] "_private_key: \"0x" $2 "\"\n"}'
+  zkevm_l2_sequencer_address: "0xB737f29807Bbc845e965eA358d70df52fAE80444"
+  zkevm_l2_sequencer_private_key: "0x3c0df30c0ee3b26d76f16155cce5d764afb557b73f33a66146e62ee32fc61c7f"
 
-  zkevm_l2_aggregator_address: "0xCae5b68Ff783594bDe1b93cdE627c741722c4D4d"
-  zkevm_l2_aggregator_private_key: "0x2857ca0e7748448f3a50469f7ffe55cde7299d5696aedd72cfe18a06fb856970"
+  zkevm_l2_aggregator_address: "0x5A4f57f45B5D7cea35607a29646fA83A317fa580"
+  zkevm_l2_aggregator_private_key: "0x752c7e4197b05c36302a63459edd485246e9cbbf5d7e651db48be8268d19d316"
 
-  zkevm_l2_claimtxmanager_address: "0x5f5dB0D4D58310F53713eF4Df80ba6717868A9f8"
-  zkevm_l2_claimtxmanager_private_key: "0x8d5c9ecd4ba2a195db3777c8412f8e3370ae9adffac222a54a84e116c7f8b934"
+  zkevm_l2_claimtxmanager_address: "0x3c6a194be58a0fA2D386e9Bd5302bbfD962963eD"
+  zkevm_l2_claimtxmanager_private_key: "0x3d5fa3f8c73a38258249aebdb2f4e496a13c0d1dc7b5d14bf7127af0027fc98a"
 
-  zkevm_l2_timelock_address: "0x130aA39Aa80407BD251c3d274d161ca302c52B7A"
-  zkevm_l2_timelock_private_key: "0x80051baf5a0a749296b9dcdb4a38a264d2eea6d43edcf012d20b5560708cf45f"
+  zkevm_l2_timelock_address: "0x99681Ea78f618141f3C25cC3179aDbB38120dB24"
+  zkevm_l2_timelock_private_key: "0x86d506f64c3e72a31efb8a531632b5d3a5458ec5be5153e68a9231d95f3ac97d"
 
-  zkevm_l2_admin_address: "0xE34aaF64b29273B7D567FCFc40544c014EEe9970"
-  zkevm_l2_admin_private_key: "0x12d7de8621a77640c9241b2595ba78ce443d05e94090365ab3bb5e19df82c625"
+  zkevm_l2_admin_address: "0x9ac8822bf20cda2B0372e1E5EA3a461FcCa9853A"
+  zkevm_l2_admin_private_key: "0xcef7a4b93ac082f776502c9ab4215b8fc3be6b72d45710b3b5e34c1660770ea2"
 
-  zkevm_l2_loadtest_address: "0x81457240ff5b49CaF176885ED07e3E7BFbE9Fb81"
-  zkevm_l2_loadtest_private_key: "0xd7df6d64c569ffdfe7c56e6b34e7a2bdc7b7583db74512a9ffe26fe07faaa5de"
+  zkevm_l2_loadtest_address: "0xF4dAdCFE734C017E1b58e11a10bAECbd480E23f3"
+  zkevm_l2_loadtest_private_key: "0xbe212ee0233bac7920e220381404a8fcb368ad50806317354135caebce9c981c"
 
-  zkevm_l2_agglayer_address: "0x351e560852ee001d5D19b5912a269F849f59479a"
-  zkevm_l2_agglayer_private_key: "0x1d45f90c0a9814d8b8af968fa0677dab2a8ff0266f33b136e560fe420858a419"
+  zkevm_l2_agglayer_address: "0x5db44121f30E76bae8fCA1B4c0D52B083ee01A4D"
+  zkevm_l2_agglayer_private_key: "0x156dcfc170fd9b189774b90394b0de4d09034dd14034e73bc0f499db31636795"
 
-  zkevm_l2_dac_address: "0x5951F5b2604c9B42E478d5e2B2437F44073eF9A6"
-  zkevm_l2_dac_private_key: "0x85d836ee6ea6f48bae27b31535e6fc2eefe056f2276b9353aafb294277d8159b"
+  zkevm_l2_dac_address: "0x6013De700B95352e97C85E0341e1A35a659443A6"
+  zkevm_l2_dac_private_key: "0x98bc1607fad34b510222bac67aaeec12cba82d056705d61749449e2aed1d5aba"
 
-  zkevm_l2_proofsigner_address: "0x7569cc70950726784c8D3bB256F48e43259Cb445"
-  zkevm_l2_proofsigner_private_key: "0x77254a70a02223acebf84b6ed8afddff9d3203e31ad219b2bf900f4780cf9b51"
+  zkevm_l2_proofsigner_address: "0x739e0B4CE3E5Ba18AE912dC0620c39bD38f11ade"
+  zkevm_l2_proofsigner_private_key: "0xfb6af684875cce613ecb24fac6d3d8d7d949af651bfabd0a3b3e4eeb96c6f0dd"
 
   # Keystore password.
   zkevm_l2_keystore_password: pSnv6Dh5s9ahuzGzH9RoCDrKAMddaX3m
 
   ## L1 configuration.
-  l1_chain_id: 271828
-  l1_preallocated_mnemonic: code code code code code code code code code code code quality
-  l1_funding_amount: 100ether
-  l1_rpc_url: http://el-1-geth-lighthouse:8545
-  l1_ws_url: ws://el-1-geth-lighthouse:8546
+  l1_chain_id: 11155111
+  l1_preallocated_mnemonic: patient path quality silver ethics admit process violin dance split agree poet
+  l1_funding_amount: 5ether
+  l1_rpc_url: https://eth-sepolia.g.alchemy.com/v2/IbeMYSz9ndioTRFbDHBRhxq_iprUKe1A
+  l1_ws_url: wss://eth-sepolia.g.alchemy.com/v2/IbeMYSz9ndioTRFbDHBRhxq_iprUKe1A
   # https://github.com/ethpandaops/ethereum-package/tree/main?tab=readme-ov-file#configuration
   l1_additional_services: [
-    # blockscout, # block explorer
+     blockscout, # block explorer
     # dora, # beaconchain explorer
     # el_forkmon, # fork monitor tool
   ]
@@ -135,7 +136,7 @@ args:
   ## Rollup configuration.
 
   # The chain id of the new rollup.
-  zkevm_rollup_chain_id: 10101
+  zkevm_rollup_chain_id: 70701
 
   # The fork id of the new rollup. It indicates the prover (zkROM/executor) version.
   zkevm_rollup_fork_id: 9
