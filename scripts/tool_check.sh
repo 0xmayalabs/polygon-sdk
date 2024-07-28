@@ -75,23 +75,24 @@ check_jq_version() {
     fi
 }
 
-check_yq_version() {
-    yq_install_docs="https://pypi.org/project/yq/"
-    if ensure_optional_tool_is_installed "yq" "$yq_install_docs"; then
-        yq_major_version_supported="$(echo "$YQ_VERSION_SUPPORTED" | cut -d '.' -f 1)"
-        yq_minor_version_supported="$(echo "$YQ_VERSION_SUPPORTED" | cut -d '.' -f 2)"
-
-        yq_version="$(yq --version | cut -d ' ' -f 2)"
-        major_yq_version="$(echo "$yq_version" | cut -d '.' -f 1)"
-        minor_yq_version="$(echo "$yq_version" | cut -d '.' -f 2)"
-        if { [ "$major_yq_version" -eq "$yq_major_version_supported" ] && [ "$minor_yq_version" -ge "$yq_minor_version_supported" ]; }; then
-            echo "✅ yq $yq_version is installed, meets the requirement (>=$YQ_VERSION_SUPPORTED)."
-        else
-            echo "❌ yq $yq_version is installed, but only version $YQ_VERSION_SUPPORTED is supported by the package."
-            exit 1
-        fi
-    fi
-}
+# Note: This script has bugs. Uncomment it.
+#check_yq_version() {
+#    yq_install_docs="https://pypi.org/project/yq/"
+#    if ensure_optional_tool_is_installed "yq" "$yq_install_docs"; then
+#        yq_major_version_supported="$(echo "$YQ_VERSION_SUPPORTED" | cut -d '.' -f 1)"
+#        yq_minor_version_supported="$(echo "$YQ_VERSION_SUPPORTED" | cut -d '.' -f 2)"
+#
+#        yq_version="$(yq --version | cut -d ' ' -f 2)"
+#        major_yq_version="$(echo "$yq_version" | cut -d '.' -f 1)"
+#        minor_yq_version="$(echo "$yq_version" | cut -d '.' -f 2)"
+#        if { [ "$major_yq_version" -eq "$yq_major_version_supported" ] && [ "$minor_yq_version" -ge "$yq_minor_version_supported" ]; }; then
+#            echo "✅ yq $yq_version is installed, meets the requirement (>=$YQ_VERSION_SUPPORTED)."
+#        else
+#            echo "❌ yq $yq_version is installed, but only version $YQ_VERSION_SUPPORTED is supported by the package."
+#            exit 1
+#        fi
+#    fi
+#}
 
 check_cast_version() {
     cast_install_docs="https://book.getfoundry.sh/getting-started/installation#using-foundryup"

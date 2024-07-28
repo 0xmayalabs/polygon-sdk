@@ -1,0 +1,93 @@
+{
+  "RootKey": "xprv9s21ZrQH143K49nNuicZEnzFG2VxS4QjLjgbSBgEDaADbYYpqN67FLiDXavcJBWW1DJHszBzaD5J3GYwb4hBgXGBx5MRVonppSpk9HgLM46",
+  "Seed": "8f5f2362e0e4f22e343620772bebe3dbfca917d8a701e544c4049ae81a1a897f496b14488db15f03d8f55d6ccaf49de66bc224def9c8b19c975fb9e513ba3aaf",
+  "Mnemonic": "twenty garment idea impact dignity humor iron ritual remind brief fantasy calm",
+  "DerivationPath": "m/44'/60'/0'",
+  "AccountPublicKey": "xpub6BjvkkvMXZjYjoW8eMC9k5ZQ3eDCX8hBD4iLCEH7NwJnX6qiQkJ3LQfPp7ct3GFuoX5BVJDy22Vb2g9eE3kDWUefEjsayt7HZfiYcKzjrWJ",
+  "AccountPrivateKey": "xprv9xkaMFPThCBFXKRfYKf9NwcfVcNi7fyKqqnjPqsVpbmoeJWZsCynncLuxrT37XNsAQmCtFNVXnmuZkgcj5t1wDuodWfQz5BTkSHGCAUd8fw",
+  "BIP32PublicKey": "xpub6EtiQMfwqsnhkYjk1GZ4vYe3t5XXrUhTeD145XUCMuXyEgxRw6MUwmA8orhZFyUrbNjjMkE4WSsbCdURo2DYw9oCS8c91GhZ11RJJisNcMH",
+  "BIP32PrivateKey": "xprvA1uMzr941WEQY4fGuF24ZQhKL3h3T1ycGz5TH94aoZzzMtdHPZ3EPxqexZBVDrsNrNauwoyADjvaTRc7HZXfGHXLjZT51z4SuRL5ePkBQni",
+  "Addresses": [
+   {
+    "Path": "m/44'/60'/0'/0/0",
+    "HexPublicKey": "028057a880426baef7ebb5163cd14f7e6097a02b05f7c316f4baf8b080d1e7358b",
+    "HexFullPublicKey": "8057a880426baef7ebb5163cd14f7e6097a02b05f7c316f4baf8b080d1e7358ba918904b90a2b410ab86dafb208464a4f5b6e12b86b9defe73f77c6b946dcf7c",
+    "HexPrivateKey": "3c0df30c0ee3b26d76f16155cce5d764afb557b73f33a66146e62ee32fc61c7f",
+    "ETHAddress": "0xB737f29807Bbc845e965eA358d70df52fAE80444",
+    "BTCAddress": "1M7HprJMTwGWLnZ2emVRc6A5FgPsrdCr8k",
+    "WIF": "KyESzZXRNSY2nrFskJoWHk3LEXoNDixrVe4HgU99hKVUTuwsv14z"
+   },
+   {
+    "Path": "m/44'/60'/0'/0/1",
+    "HexPublicKey": "02ca55f99dfc3f56f73ab7264588022903beeb539c277d49d109482f41853f532b",
+    "HexFullPublicKey": "ca55f99dfc3f56f73ab7264588022903beeb539c277d49d109482f41853f532bb9be059c0c5f60023f66d864bba9bffbe7db22e4dbf7f80cb0af16a774b20974",
+    "HexPrivateKey": "752c7e4197b05c36302a63459edd485246e9cbbf5d7e651db48be8268d19d316",
+    "ETHAddress": "0x5A4f57f45B5D7cea35607a29646fA83A317fa580",
+    "BTCAddress": "19CCaRS1JgM7k26v2QRiXWXgZdnatXudbA",
+    "WIF": "L19UspLqTPiRtdtbX4eU88GSfYfEh2wcEQ7PqJ4GuCZq2E1kcjP9"
+   },
+   {
+    "Path": "m/44'/60'/0'/0/2",
+    "HexPublicKey": "03a3a45f3b859c908615befa3c05f6b6102f5dec3fd7f890159f4c3e8de9a9169b",
+    "HexFullPublicKey": "a3a45f3b859c908615befa3c05f6b6102f5dec3fd7f890159f4c3e8de9a9169bebbd96755b2842bcfe89b9ed4fdcb4881c6bec6b101fddde1a870a99b3333b03",
+    "HexPrivateKey": "3d5fa3f8c73a38258249aebdb2f4e496a13c0d1dc7b5d14bf7127af0027fc98a",
+    "ETHAddress": "0x3c6a194be58a0fA2D386e9Bd5302bbfD962963eD",
+    "BTCAddress": "1C3LVMqJpnehwLVzv99bSDr3jKvvQUffdd",
+    "WIF": "KyH1iRmQtUKHBk2xH3M4gpQM8PQLiBwembCA6qX9vTWEPq6bJLGq"
+   },
+   {
+    "Path": "m/44'/60'/0'/0/3",
+    "HexPublicKey": "03d13b71a5298de175d40b3941f4bd2940e4a812b90328b018d74e1491ce401ac8",
+    "HexFullPublicKey": "d13b71a5298de175d40b3941f4bd2940e4a812b90328b018d74e1491ce401ac8981f4a13a5ffe2b555bd8c0bf7ab9e356ca5c6d1c0435e1fad3a624524033bf1",
+    "HexPrivateKey": "86d506f64c3e72a31efb8a531632b5d3a5458ec5be5153e68a9231d95f3ac97d",
+    "ETHAddress": "0x99681Ea78f618141f3C25cC3179aDbB38120dB24",
+    "BTCAddress": "13eA8B2qwqZ4n8C4P9A63tp4w7HmPMQ7Wb",
+    "WIF": "L1joknqSJaPZpby7KKbqitxRLL7TqK7CHCnP2qLgmu48b84EDUo4"
+   },
+   {
+    "Path": "m/44'/60'/0'/0/4",
+    "HexPublicKey": "0318e32bcac999628d3fae16b963fe3846b97fe9f670cdd24cfd0b371975ad8220",
+    "HexFullPublicKey": "18e32bcac999628d3fae16b963fe3846b97fe9f670cdd24cfd0b371975ad82207fe0f161d7d0e90e0f8fddffdb504d28a6d31f8a51696263b5f535407e2afe19",
+    "HexPrivateKey": "cef7a4b93ac082f776502c9ab4215b8fc3be6b72d45710b3b5e34c1660770ea2",
+    "ETHAddress": "0x9ac8822bf20cda2B0372e1E5EA3a461FcCa9853A",
+    "BTCAddress": "1Jv3Y9mvFsekm28QdF5FaUeLNxCWB98rfA",
+    "WIF": "L4A2bidKB56HcxsBwZgyHrUaFnQad1ZxrqzkuTZyC2seWzY4bwf1"
+   },
+   {
+    "Path": "m/44'/60'/0'/0/5",
+    "HexPublicKey": "02fdeedee2f51c31c25fb1ca487ae130a7e74ecf529352e4e8f8c7adb2f3fabf86",
+    "HexFullPublicKey": "fdeedee2f51c31c25fb1ca487ae130a7e74ecf529352e4e8f8c7adb2f3fabf867934454dda44488c726bf7d89587627cf2a18c8a313e2373170d88993173f2b0",
+    "HexPrivateKey": "be212ee0233bac7920e220381404a8fcb368ad50806317354135caebce9c981c",
+    "ETHAddress": "0xF4dAdCFE734C017E1b58e11a10bAECbd480E23f3",
+    "BTCAddress": "14XcEKRRPGkQRyRkDcxrrwmQVjbhxLhW4k",
+    "WIF": "L3bJEo2CEbvV3kjVwqSbcCNWU5FugogHVTzaqcfbh7fUPevCYAqp"
+   },
+   {
+    "Path": "m/44'/60'/0'/0/6",
+    "HexPublicKey": "0399194452cd8f6861d30668c67db72e46726c4b7cc9e21a45d0aa2418f2544980",
+    "HexFullPublicKey": "99194452cd8f6861d30668c67db72e46726c4b7cc9e21a45d0aa2418f2544980e71d8a6606fc930b7c7f9a5350b6196fa619b35142f7a122f529e240b87de295",
+    "HexPrivateKey": "156dcfc170fd9b189774b90394b0de4d09034dd14034e73bc0f499db31636795",
+    "ETHAddress": "0x5db44121f30E76bae8fCA1B4c0D52B083ee01A4D",
+    "BTCAddress": "1GWdVamH8Dg9QCL2hJDK4E2SfAx2jistQH",
+    "WIF": "KwwNBML3989JGpHJgDZU4szY2r5Lhiwb5TYn1NSoGq1nXwCLniaD"
+   },
+   {
+    "Path": "m/44'/60'/0'/0/7",
+    "HexPublicKey": "039300b642927acf71c4786a8fd185612e345bf4b5971f288be6c269c057eaf4b1",
+    "HexFullPublicKey": "9300b642927acf71c4786a8fd185612e345bf4b5971f288be6c269c057eaf4b1095e379177fa467d89a4b4e4c3921cd8ebef36fb221853801b2d1c3ef57e33f1",
+    "HexPrivateKey": "98bc1607fad34b510222bac67aaeec12cba82d056705d61749449e2aed1d5aba",
+    "ETHAddress": "0x6013De700B95352e97C85E0341e1A35a659443A6",
+    "BTCAddress": "1Ae1ddgtTiUvrx4gVt5Rm7jFvXN5J2B1zu",
+    "WIF": "L2LcAsuy8aZsqgjSJSxy3YGTvQpYQt6Ny2bDXZNeYidSBncFZbcA"
+   },
+   {
+    "Path": "m/44'/60'/0'/0/8",
+    "HexPublicKey": "021ecd00a6aa2a8732703a99c1fa074a300e5ba176b45cdbceeb63f49706a50cdc",
+    "HexFullPublicKey": "1ecd00a6aa2a8732703a99c1fa074a300e5ba176b45cdbceeb63f49706a50cdc7cafb686ef7a3c132a559618791f7b08539bdae5895bc78632546419c7052f5a",
+    "HexPrivateKey": "fb6af684875cce613ecb24fac6d3d8d7d949af651bfabd0a3b3e4eeb96c6f0dd",
+    "ETHAddress": "0x739e0B4CE3E5Ba18AE912dC0620c39bD38f11ade",
+    "BTCAddress": "16UjRpHRwcnE9ucw98tU7ctTrrhz8mCxNJ",
+    "WIF": "L5eS9APXmvkU1JePyKAeX2VyYw4v6sVemMRUThGSLUcezVHL8qV2"
+   }
+  ]
+ }
