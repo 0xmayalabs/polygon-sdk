@@ -29,5 +29,7 @@ def run(plan, args):
             "ws_url": ws_url,
             "chain_id": str(args["zkevm_rollup_chain_id"]),
             "deployment_suffix": args["deployment_suffix"],
+            "blockscout_public_ip": "34.46.23.190",
+            "blockscout_backend_port": 50102
         },
     )
